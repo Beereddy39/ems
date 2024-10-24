@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Management System</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .event-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .event-card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.2s;
+        }
+        .event-card:hover {
+            transform: translateY(-5px);
+        }
+        .event-card img {
+            width: 100%;
+            height: auto;
+        }
+        .event-details {
+            padding: 15px;
+        }
+        .event-name {
+            font-size: 1.5rem;
+            margin: 0.5rem 0;
+        }
+        .event-price {
+            color: green;
+            font-weight: bold;
+            margin: 0.5rem 0;
+        }
+        .event-info {
+            font-size: 0.9rem;
+            color: #666;
+        }
+        .event-description {
+            margin: 10px 0;
+        }
+        .register-button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .register-button:hover {
+            background-color: #0056b3;
+        }
+        .registration-form {
+            display: none;
+            margin-top: 10px;
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        .form-field {
+            margin-bottom: 10px;
+        }
+        .form-field label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-field input {
+            width: 100%;
+            padding: 8px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+        .form-field button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .form-field button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <h1>Concert Events</h1>
+    
+
+    <div class="event-container">
+        <div class="event-container">
+            <div class="event-card">
+                <img src="images/concert1.jpg" alt="Rock Legends Live">
+                <div class="event-details">
+                    <h2 class="event-name">Rock Legends Live</h2>
+                    <p class="event-price">$150</p>
+                    <p class="event-info"><strong>Category:</strong> Concert</p>
+                    <p class="event-info"><strong>Date:</strong> November 10, 2024</p>
+                    <p class="event-info"><strong>Location:</strong> Madison Square Garden, New York, NY</p>
+                    <p class="event-info"><strong>Organizer:</strong> Concert Promotions Inc.</p>
+                    <p class="event-description">A night of electrifying performances by rock legends, featuring a lineup of iconic bands.</p>
+                    
+                    <button class="register-button" onclick="window.location.href='/registration'">Register</button>
+                </div>
+            </div>
+        </div>
+        
+    
+        <div class="event-card">
+            <img src="images\concert2.jpg" alt="Jazz Nights">
+            <div class="event-details">
+                <h2 class="event-name">Jazz Nights</h2>
+                <p class="event-price">$80</p>
+                <p class="event-info"><strong>Category:</strong> Concert</p>
+                <p class="event-info"><strong>Date:</strong> December 15, 2024</p>
+                <p class="event-info"><strong>Location:</strong> Blue Note, New York, NY</p>
+                <p class="event-info"><strong>Organizer:</strong> Jazz Events Co.</p>
+                <p class="event-description">Experience the soulful sounds of jazz in an intimate setting with top artists.</p>
+                <button class="register-button" onclick="window.location.href='/registration'">Register</button>
+            </div>
+        </div>
+    
+        <div class="event-card">
+            <img src="images\concert3.jpg" alt="Pop Spectacular">
+            <div class="event-details">
+                <h2 class="event-name">Pop Spectacular</h2>
+                <p class="event-price">$120</p>
+                <p class="event-info"><strong>Category:</strong> Concert</p>
+                <p class="event-info"><strong>Date:</strong> January 5, 2025</p>
+                <p class="event-info"><strong>Location:</strong> Staples Center, Los Angeles, CA</p>
+                <p class="event-info"><strong>Organizer:</strong> Pop Music Group</p>
+                <p class="event-description">Join us for a night filled with chart-topping hits from the biggest pop stars.</p>
+                <button class="register-button" onclick="window.location.href='/registration'">Register</button>
+            </div>
+        </div>
+    
+        <div class="event-card">
+            <img src="images\concert4.jpg" alt="Country Fest">
+            <div class="event-details">
+                <h2 class="event-name">Country Fest</h2>
+                <p class="event-price">$100</p>
+                <p class="event-info"><strong>Category:</strong> Concert</p>
+                <p class="event-info"><strong>Date:</strong> March 20, 2025</p>
+                <p class="event-info"><strong>Location:</strong> Nashville Fairgrounds, Nashville, TN</p>
+                <p class="event-info"><strong>Organizer:</strong> Country Music Association</p>
+                <p class="event-description">Celebrate country music with performances from the top artists in the genre.</p>
+                <button class="register-button" onclick="window.location.href='/registration'">Register</button>
+            </div>
+        </div>
+    
+        <div class="event-card">
+            <img src="images\concert5.jpg" alt="Hip Hop Extravaganza">
+            <div class="event-details">
+                <h2 class="event-name">Hip Hop Extravaganza</h2>
+                <p class="event-price">$130</p>
+                <p class="event-info"><strong>Category:</strong> Concert</p>
+                <p class="event-info"><strong>Date:</strong> April 15, 2025</p>
+                <p class="event-info"><strong>Location:</strong> Barclays Center, Brooklyn, NY</p>
+                <p class="event-info"><strong>Organizer:</strong> Urban Beats</p>
+                <p class="event-description">Experience the hottest hip hop artists and their electrifying performances.</p>
+                <button class="register-button" onclick="window.location.href='/registration'">Register</button>
+            </div>
+        </div>
+    
+        <div class="event-card">
+            <img src="images\concert6.jpg" alt="Indie Rock Festival">
+            <div class="event-details">
+                <h2 class="event-name">Indie Rock Festival</h2>
+                <p class="event-price">$90</p>
+                <p class="event-info"><strong>Category:</strong> Concert</p>
+                <p class="event-info"><strong>Date:</strong> May 5, 2025</p>
+                <p class="event-info"><strong>Location:</strong> Golden Gate Park, San Francisco, CA</p>
+                <p class="event-info"><strong>Organizer:</strong> Indie Music Collective</p>
+                <p class="event-description">Join us for a celebration of indie rock with up-and-coming bands.</p>
+                <button class="register-button" onclick="window.location.href='/registration'">Register</button>
+            </div>
+        </div>
+    
+        <div class="event-card">
+            <img src="images\concert7.jpg" alt="Classic Rock Revival">
+            <div class="event-details">
+                <h2 class="event-name">Classic Rock Revival</h2>
+                <p class="event-price">$140</p>
+                <p class="event-info"><strong>Category:</strong> Concert</p>
+                <p class="event-info"><strong>Date:</strong> June 30, 2025</p>
+                <p class="event-info"><strong>Location:</strong> Red Rocks Amphitheatre, Morrison, CO</p>
+                <p class="event-info"><strong>Organizer:</strong> Rock Revival LLC</p>
+                <p class="event-description">A tribute to the greatest classic rock songs and bands of all time.</p>
+                <button class="register-button" onclick="window.location.href='/registration'">Register</button>
+            </div>
+        </div>
+    
+        <div class="event-card">
+            <img src="images\concert8.jpg" alt="Electronic Dance Music Festival">
+            <div class="event-details">
+                <h2 class="event-name">Electronic Dance Music Festival</h2>
+                <p class="event-price">$180</p>
+                <p class="event-info"><strong>Category:</strong> Concert</p>
+                <p class="event-info"><strong>Date:</strong> July 25, 2025</p>
+                <p class="event-info"><strong>Location:</strong> Tomorrowland, Belgium</p>
+                <p class="event-info"><strong>Organizer:</strong> EDM Events Corp.</p>
+                <p class="event-description">Dance the night away with world-renowned DJs at this massive festival.</p>
+                <button class="register-button" onclick="window.location.href='/registration'">Register</button>
+            </div>
+        </div>
+    
+        <div class="event-card">
+            <img src="images\concert9.jpg" alt="Reggae Jam">
+            <div class="event-details">
+                <h2 class="event-name">Reggae Jam</h2>
+                <p class="event-price">$110</p>
+                <p class="event-info"><strong>Category:</strong> Concert</p>
+                <p class="event-info"><strong>Date:</strong> August 20, 2025</p>
+                <p class="event-info"><strong>Location:</strong> Miami Beach, FL</p>
+                <p class="event-info"><strong>Organizer:</strong> Reggae Vibes</p>
+                <p class="event-description">Feel the rhythm of reggae music at this vibrant outdoor concert.</p>
+                <button class="register-button" onclick="window.location.href='/registration'">Register</button>
+            </div>
+        </div>
+    
+        <div class="event-card">
+            <img src="images\concert10.jpg" alt="Blues Night">
+            <div class="event-details">
+                <h2 class="event-name">Blues Night</h2>
+                <p class="event-price">$75</p>
+                <p class="event-info"><strong>Category:</strong> Concert</p>
+                <p class="event-info"><strong>Date:</strong> September 15, 2025</p>
+                <p class="event-info"><strong>Location:</strong> The House of Blues, New Orleans, LA</p>
+                <p class="event-info"><strong>Organizer:</strong> Blues Society</p>
+                <p class="event-description">A soulful evening of blues music featuring top artists.</p>
+                <button class="register-button" onclick="window.location.href='/registration'">Register</button>
+            </div>
+        </div>
+    
+        <div class="event-card">
+            <img src="images\concert11.jpg" alt="Folk Music Festival">
+            <div class="event-details">
+                <h2 class="event-name">Folk Music Festival</h2>
+                <p class="event-price">$85</p>
+                <p class="event-info"><strong>Category:</strong> Concert</p>
+                <p class="event-info"><strong>Date:</strong> October 12, 2025</p>
+                <p class="event-info"><strong>Location:</strong> Central Park, New York, NY</p>
+                <p class="event-info"><strong>Organizer:</strong> Folk Music Alliance</p>
+                <p class="event-description">A weekend of folk music celebrating the art of storytelling through song.</p>
+                <button class="register-button" onclick="window.location.href='/registration'">Register</button>
+            </div>
+        </div>
+    
+        <div class="event-card">
+            <img src="images\concert12.jpg" alt="World Music Festival">
+            <div class="event-details">
+                <h2 class="event-name">World Music Festival</h2>
+                <p class="event-price">$95</p>
+                <p class="event-info"><strong>Category:</strong> Concert</p>
+                <p class="event-info"><strong>Date:</strong> November 22, 2025</p>
+                <p class="event-info"><strong>Location:</strong> Chicago, IL</p>
+                <p class="event-info"><strong>Organizer:</strong> Global Music Events</p>
+                <p class="event-description">Experience the diverse sounds of world music from various cultures.</p>
+                <button class="register-button" onclick="window.location.href='/registration'">Register</button>
+            </div>
+        </div>
+    
+        <div class="event-card">
+            <img src="images\concert13.jpg" alt="Piano Concert Series">
+            <div class="event-details">
+                <h2 class="event-name">Piano Concert Series</h2>
+                <p class="event-price">$130</p>
+                <p class="event-info"><strong>Category:</strong> Concert</p>
+                <p class="event-info"><strong>Date:</strong> December 10, 2025</p>
+                <p class="event-info"><strong>Location:</strong> Carnegie Hall, New York, NY</p>
+                <p class="event-info"><strong>Organizer:</strong> Classical Concerts Co.</p>
+                <p class="event-description">A series of stunning piano performances by renowned pianists.</p>
+                <button class="register-button" onclick="window.location.href='/registration'">Register</button>
+
+                
+            </div>
+        </div>
+    
+        <div class="event-card">
+            <img src="images\concert14.jpg" alt="Vocal Harmony Concert">
+            <div class="event-details">
+                <h2 class="event-name">Vocal Harmony Concert</h2>
+                <p class="event-price">$70</p>
+                <p class="event-info"><strong>Category:</strong> Concert</p>
+                <p class="event-info"><strong>Date:</strong> January 15, 2026</p>
+                <p class="event-info"><strong>Location:</strong> The Ryman Auditorium, Nashville, TN</p>
+                <p class="event-info"><strong>Organizer:</strong> Harmony Productions</p>
+                <p class="event-description">An evening showcasing beautiful vocal harmonies from talented artists.</p>
+                <button class="register-button" onclick="window.location.href='/registration'">Register</button>
+            </div>
+        </div>
+    
+        <div class="event-card">
+            <img src="images\concert15.jpg" alt="Classic Symphony Night">
+            <div class="event-details">
+                <h2 class="event-name">Classic Symphony Night</h2>
+                <p class="event-price">$140</p>
+                <p class="event-info"><strong>Category:</strong> Concert</p>
+                <p class="event-info"><strong>Date:</strong> February 20, 2026</p>
+                <p class="event-info"><strong>Location:</strong> The Symphony Hall, Boston, MA</p>
+                <p class="event-info"><strong>Organizer:</strong> Symphony Orchestra</p>
+                <p class="event-description">Enjoy an evening of classical music performed by a world-class symphony orchestra.</p>
+                <button class="register-button" onclick="window.location.href='/registration'">Register</button>
+            </div>
+        </div>
+    
+        <div class="event-card">
+            <img src="images\concert16.jpg" alt="Choral Festival">
+            <div class="event-details">
+                <h2 class="event-name">Choral Festival</h2>
+                <p class="event-price">$85</p>
+                <p class="event-info"><strong>Category:</strong> Concert</p>
+                <p class="event-info"><strong>Date:</strong> March 12, 2026</p>
+                <p class="event-info"><strong>Location:</strong> The Kennedy Center, Washington, DC</p>
+                <p class="event-info"><strong>Organizer:</strong> Choral Society</p>
+                <p class="event-description">A celebration of choral music featuring various choirs from around the world.</p>
+                <button class="register-button" onclick="window.location.href='/registration'">Register</button>
+            </div>
+        </div>
+    
+        <div class="event-card">
+            <img src="images\concert17.jpg" alt="Guitar Festival">
+            <div class="event-details">
+                <h2 class="event-name">Guitar Festival</h2>
+                <p class="event-price">$100</p>
+                <p class="event-info"><strong>Category:</strong> Concert</p>
+                <p class="event-info"><strong>Date:</strong> April 8, 2026</p>
+                <p class="event-info"><strong>Location:</strong> The Guitar Center, Los Angeles, CA</p>
+                <p class="event-info"><strong>Organizer:</strong> Guitar Society</p>
+                <p class="event-description">Join us for a celebration of guitar music with performances by top guitarists.</p>
+                <button class="register-button" onclick="window.location.href='/registration'">Register</button>
+            </div>
+        </div>
+    
+        <div class="event-card">
+            <img src="images\concert18.jpg" alt="International Music Awards">
+            <div class="event-details">
+                <h2 class="event-name">International Music Awards</h2>
+                <p class="event-price">$200</p>
+                <p class="event-info"><strong>Category:</strong> Concert</p>
+                <p class="event-info"><strong>Date:</strong> May 21, 2026</p>
+                <p class="event-info"><strong>Location:</strong> The Staples Center, Los Angeles, CA</p>
+                <p class="event-info"><strong>Organizer:</strong> Music Awards LLC</p>
+                <p class="event-description">Celebrate the best in music at the prestigious International Music Awards.</p>
+                <button class="register-button" onclick="window.location.href='/registration'">Register</button>
+            </div>
+        </div>
+    
+        <div class="event-card">
+            <img src="images\concert19.jpg" alt="Salsa Night">
+            <div class="event-details">
+                <h2 class="event-name">Salsa Night</h2>
+                <p class="event-price">$75</p>
+                <p class="event-info"><strong>Category:</strong> Concert</p>
+                <p class="event-info"><strong>Date:</strong> June 18, 2026</p>
+                <p class="event-info"><strong>Location:</strong> The Fillmore, San Francisco, CA</p>
+                <p class="event-info"><strong>Organizer:</strong> Salsa Music Productions</p>
+                <p class="event-description">Dance the night away to vibrant salsa music and learn some moves!</p>
+                <button class="register-button" onclick="window.location.href='/registration'">Register</button>
+            </div>
+        </div>
+    
+        <div class="event-card">
+            <img src="images\concert20.jpg" alt="Gospel Concert">
+            <div class="event-details">
+                <h2 class="event-name">Gospel Concert</h2>
+                <p class="event-price">$50</p>
+                <p class="event-info"><strong>Category:</strong> Concert</p>
+                <p class="event-info"><strong>Date:</strong> July 10, 2026</p>
+                <p class="event-info"><strong>Location:</strong> The Cathedral, Chicago, IL</p>
+                <p class="event-info"><strong>Organizer:</strong> Gospel Music Association</p>
+                <p class="event-description">Experience uplifting performances at this inspiring gospel concert.</p>
+                <button class="register-button" onclick="window.location.href='/registration'">Register</button>
+            </div>
+        </div>
+    </div>
+    
+
+    <script>
+        function toggleForm(eventId) {
+            const form = document.getElementById(eventId);
+            form.style.display = form.style.display === "block" ? "none" : "block";
+        }
+
+        function submitForm(eventName, price) {
+            const name = document.querySelector(`#name-${eventName.replace(/\s+/g, '-').toLowerCase()}`).value;
+            const email = document.querySelector(`#email-${eventName.replace(/\s+/g, '-').toLowerCase()}`).value;
+
+            if (name && email) {
+                alert(`Thank you for registering for ${eventName}!\nPrice: $${price}\nName: ${name}\nEmail: ${email}`);
+                // Reset the form or any other actions you want to perform
+                document.querySelector(`#name-${eventName.replace(/\s+/g, '-').toLowerCase()}`).value = '';
+                document.querySelector(`#email-${eventName.replace(/\s+/g, '-').toLowerCase()}`).value = '';
+                toggleForm(eventId);
+            } else {
+                alert("Please fill in both fields.");
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketing Events</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        .event-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
+            overflow: hidden;
+            padding: 20px;
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto 20px;
+        }
+        .event-card img {
+            width: 100%;
+            border-radius: 10px;
+            height: 200px;
+            object-fit: cover;
+        }
+        .event-details {
+            padding: 20px 0;
+        }
+        .event-name {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        .event-info, .event-description {
+            margin: 5px 0;
+            color: #666;
+        }
+        .event-price {
+            font-size: 20px;
+            color: #27ae60;
+        }
+        .register-button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .register-button:hover {
+            background-color: #2980b9;
+        }
+        .registration-form {
+            display: none;
+            margin-top: 20px;
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .form-field {
+            margin-bottom: 10px;
+        }
+        .form-field label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-field input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-field button {
+            background-color: #2ecc71;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Marketing Events</h1>
+
+
+<div class="event-card">
+    <img src="images\marketing1.jpg" alt="Digital Marketing Bootcamp">
+    <div class="event-details">
+        <h2 class="event-name">Digital Marketing Bootcamp</h2>
+        <p class="event-price">$150</p>
+        <p class="event-info"><strong>Category:</strong> Marketing</p>
+        <p class="event-info"><strong>Date:</strong> November 10, 2024</p>
+        <p class="event-info"><strong>Location:</strong> New York, USA</p>
+        <p class="event-info"><strong>Organizer:</strong> DigitalEdge Academy</p>
+        <p class="event-description">Learn the essentials of digital marketing, including SEO, content marketing, social media, and PPC advertising.</p>
+        <button class="register-button" onclick="window.location.href='/registration'">Register</button>
+
+    </div>
+</div>
+
+<!-- Event 2 -->
+<div class="event-card">
+    <img src="images\marketing2.jpg" alt="Social Media Marketing Summit">
+    <div class="event-details">
+        <h2 class="event-name">Social Media Marketing Summit</h2>
+        <p class="event-price">$180</p>
+        <p class="event-info"><strong>Category:</strong> Marketing</p>
+        <p class="event-info"><strong>Date:</strong> December 5, 2024</p>
+        <p class="event-info"><strong>Location:</strong> London, UK</p>
+        <p class="event-info"><strong>Organizer:</strong> SocialMaster Studios</p>
+        <p class="event-description">A deep dive into strategies for maximizing engagement, building brand loyalty, and driving conversions through social media channels.</p>
+        <button class="register-button" onclick="window.location.href='/registration'">Register</button>
+
+    </div>
+</div>
+
+<!-- Event 3 -->
+<div class="event-card">
+    <img src="images\marketing3.jpg" alt="Content Marketing Mastery Workshop">
+    <div class="event-details">
+        <h2 class="event-name">Content Marketing Mastery Workshop</h2>
+        <p class="event-price">$200</p>
+        <p class="event-info"><strong>Category:</strong> Marketing</p>
+        <p class="event-info"><strong>Date:</strong> January 15, 2025</p>
+        <p class="event-info"><strong>Location:</strong> Toronto, Canada</p>
+        <p class="event-info"><strong>Organizer:</strong> ContentGenius Academy</p>
+        <p class="event-description">Master the art of content creation and distribution, from blogs and videos to podcasts and infographics, and how to align it with your marketing strategy.</p>
+        <button class="register-button" onclick="window.location.href='/registration'">Register</button>
+
+    </div>
+</div>
+
+<!-- Event 4 -->
+<div class="event-card">
+    <img src="images\marketing4.jpg" alt="Email Marketing Automation Seminar">
+    <div class="event-details">
+        <h2 class="event-name">Email Marketing Automation Seminar</h2>
+        <p class="event-price">$120</p>
+        <p class="event-info"><strong>Category:</strong> Marketing</p>
+        <p class="event-info"><strong>Date:</strong> February 25, 2025</p>
+        <p class="event-info"><strong>Location:</strong> Sydney, Australia</p>
+        <p class="event-info"><strong>Organizer:</strong> AutoMarketer Pro</p>
+        <p class="event-description">Learn how to build automated email marketing campaigns that nurture leads, retain customers, and drive conversions.</p>
+        <button class="register-button" onclick="window.location.href='/registration'">Register</button>
+
+    </div>
+</div>
+
+<!-- Event 5 -->
+<div class="event-card">
+    <img src="images\marketing5.jpg" alt="Influencer Marketing Strategies Conference">
+    <div class="event-details">
+        <h2 class="event-name">Influencer Marketing Strategies Conference</h2>
+        <p class="event-price">$250</p>
+        <p class="event-info"><strong>Category:</strong> Marketing</p>
+        <p class="event-info"><strong>Date:</strong> March 12, 2025</p>
+        <p class="event-info"><strong>Location:</strong> Miami, USA</p>
+        <p class="event-info"><strong>Organizer:</strong> InfluenceSphere Events</p>
+        <p class="event-description">Discover how to leverage influencers to promote your brand, engage with target audiences, and drive sales with successful influencer marketing campaigns.</p>
+        <button class="register-button" onclick="window.location.href='/registration'">Register</button>
+
+    </div>
+</div>
+<!-- Event 6 -->
+<div class="event-card">
+    <img src="images\marketing6.jpg" alt="Advanced SEO Techniques Workshop">
+    <div class="event-details">
+        <h2 class="event-name">Advanced SEO Techniques Workshop</h2>
+        <p class="event-price">$180</p>
+        <p class="event-info"><strong>Category:</strong> Marketing</p>
+        <p class="event-info"><strong>Date:</strong> April 5, 2025</p>
+        <p class="event-info"><strong>Location:</strong> San Francisco, USA</p>
+        <p class="event-info"><strong>Organizer:</strong> SEOPro Academy</p>
+        <p class="event-description">Take your SEO skills to the next level with advanced keyword research, technical SEO, and link-building strategies.</p>
+        <button class="register-button" onclick="window.location.href='/registration'">Register</button>
+
+    </div>
+</div>
+
+<!-- Event 7 -->
+<div class="event-card">
+    <img src="images\marketing7.jpg" alt="Branding & Identity Design Seminar">
+    <div class="event-details">
+        <h2 class="event-name">Branding & Identity Design Seminar</h2>
+        <p class="event-price">$220</p>
+        <p class="event-info"><strong>Category:</strong> Marketing</p>
+        <p class="event-info"><strong>Date:</strong> May 20, 2025</p>
+        <p class="event-info"><strong>Location:</strong> Berlin, Germany</p>
+        <p class="event-info"><strong>Organizer:</strong> BrandExperts</p>
+        <p class="event-description">Explore the core principles of branding, identity creation, and how to build a strong and recognizable brand in today’s market.</p>
+        <button class="register-button" onclick="window.location.href='/registration'">Register</button>
+
+    </div>
+</div>
+
+<!-- Event 8 -->
+<div class="event-card">
+    <img src="images\marketing8.jpg" alt="Marketing Analytics & Data Insights Workshop">
+    <div class="event-details">
+        <h2 class="event-name">Marketing Analytics & Data Insights Workshop</h2>
+        <p class="event-price">$250</p>
+        <p class="event-info"><strong>Category:</strong> Marketing</p>
+        <p class="event-info"><strong>Date:</strong> June 10, 2025</p>
+        <p class="event-info"><strong>Location:</strong> Singapore</p>
+        <p class="event-info"><strong>Organizer:</strong> DataMarketers Pro</p>
+        <p class="event-description">Learn how to leverage data analytics to measure marketing performance, gain customer insights, and make data-driven decisions for campaign success.</p>
+        <button class="register-button" onclick="window.location.href='/registration'">Register</button>
+
+    </div>
+</div>
+
+<!-- Event 9 -->
+<div class="event-card">
+    <img src="images\marketing9.jpg" alt="Customer Experience & Retention Strategies">
+    <div class="event-details">
+        <h2 class="event-name">Customer Experience & Retention Strategies</h2>
+        <p class="event-price">$175</p>
+        <p class="event-info"><strong>Category:</strong> Marketing</p>
+        <p class="event-info"><strong>Date:</strong> July 8, 2025</p>
+        <p class="event-info"><strong>Location:</strong> Paris, France</p>
+        <p class="event-info"><strong>Organizer:</strong> CX Innovations</p>
+        <p class="event-description">Learn how to enhance customer experience, boost loyalty, and implement effective retention strategies to build long-term relationships with customers.</p>
+        <button class="register-button" onclick="window.location.href='/registration'">Register</button>
+
+    </div>
+</div>
+
+<!-- Event 10 -->
+<div class="event-card">
+    <img src="images\marketing10.jpg" alt="PPC Advertising and Campaign Optimization">
+    <div class="event-details">
+        <h2 class="event-name">PPC Advertising and Campaign Optimization</h2>
+        <p class="event-price">$195</p>
+        <p class="event-info"><strong>Category:</strong> Marketing</p>
+        <p class="event-info"><strong>Date:</strong> August 15, 2025</p>
+        <p class="event-info"><strong>Location:</strong> Los Angeles, USA</p>
+        <p class="event-info"><strong>Organizer:</strong> AdTech Pros</p>
+        <p class="event-description">Learn how to create, manage, and optimize PPC advertising campaigns for maximum ROI using platforms like Google Ads and social media advertising.</p>
+        <button class="register-button" onclick="window.location.href='/registration'">Register</button>
+
+    </div>
+</div>
+<!-- Event 11 -->
+<div class="event-card">
+    <img src="images\marketing11.jpg" alt="Social Media Marketing Bootcamp">
+    <div class="event-details">
+        <h2 class="event-name">Social Media Marketing Bootcamp</h2>
+        <p class="event-price">$150</p>
+        <p class="event-info"><strong>Category:</strong> Marketing</p>
+        <p class="event-info"><strong>Date:</strong> September 10, 2025</p>
+        <p class="event-info"><strong>Location:</strong> New York, USA</p>
+        <p class="event-info"><strong>Organizer:</strong> SocialMedia Academy</p>
+        <p class="event-description">Master social media strategies, content creation, and advertising techniques across platforms like Facebook, Instagram, and LinkedIn.</p>
+        <button class="register-button" onclick="window.location.href='/registration'">Register</button>
+
+    </div>
+</div>
+
+<!-- Event 12 -->
+<div class="event-card">
+    <img src="images\marketing12.jpg" alt="Content Marketing Strategy Workshop">
+    <div class="event-details">
+        <h2 class="event-name">Content Marketing Strategy Workshop</h2>
+        <p class="event-price">$200</p>
+        <p class="event-info"><strong>Category:</strong> Marketing</p>
+        <p class="event-info"><strong>Date:</strong> October 15, 2025</p>
+        <p class="event-info"><strong>Location:</strong> London, UK</p>
+        <p class="event-info"><strong>Organizer:</strong> ContentMasters Academy</p>
+        <p class="event-description">Learn how to craft a compelling content marketing strategy that engages audiences, drives traffic, and converts leads into customers.</p>
+        <button class="register-button" onclick="window.location.href='/registration'">Register</button>
+
+    </div>
+</div>
+
+<!-- Event 13 -->
+<div class="event-card">
+    <img src="images\marketing13.jpg" alt="Influencer Marketing Masterclass">
+    <div class="event-details">
+        <h2 class="event-name">Influencer Marketing Masterclass</h2>
+        <p class="event-price">$300</p>
+        <p class="event-info"><strong>Category:</strong> Marketing</p>
+        <p class="event-info"><strong>Date:</strong> November 5, 2025</p>
+        <p class="event-info"><strong>Location:</strong> Tokyo, Japan</p>
+        <p class="event-info"><strong>Organizer:</strong> InfluencerHub</p>
+        <p class="event-description">Explore the world of influencer marketing, from identifying the right influencers to measuring the ROI of influencer campaigns.</p>
+        <button class="register-button" onclick="window.location.href='/registration'">Register</button>
+
+    </div>
+</div>
+
+<!-- Event 14 -->
+<div class="event-card">
+    <img src="images\marketing14.jpg" alt="Email Marketing Automation Summit">
+    <div class="event-details">
+        <h2 class="event-name">Email Marketing Automation Summit</h2>
+        <p class="event-price">$250</p>
+        <p class="event-info"><strong>Category:</strong> Marketing</p>
+        <p class="event-info"><strong>Date:</strong> December 10, 2025</p>
+        <p class="event-info"><strong>Location:</strong> Toronto, Canada</p>
+        <p class="event-info"><strong>Organizer:</strong> Email Pros Academy</p>
+        <p class="event-description">Learn how to build, automate, and scale email marketing campaigns to nurture leads, retain customers, and increase sales.</p>
+        <button class="register-button" onclick="window.location.href='/registration'">Register</button>
+
+    </div>
+</div>
+
+<!-- Event 15 -->
+<div class="event-card">
+    <img src="images\marketing15.jpg" alt="Digital Advertising Trends & Strategies">
+    <div class="event-details">
+        <h2 class="event-name">Digital Advertising Trends & Strategies</h2>
+        <p class="event-price">$220</p>
+        <p class="event-info"><strong>Category:</strong> Marketing</p>
+        <p class="event-info"><strong>Date:</strong> January 20, 2026</p>
+        <p class="event-info"><strong>Location:</strong> Sydney, Australia</p>
+        <p class="event-info"><strong>Organizer:</strong> DigitalAdPro</p>
+        <p class="event-description">Stay ahead of the game with the latest trends and strategies in digital advertising, including programmatic ads, retargeting, and video ads.</p>
+        <button class="register-button" onclick="window.location.href='/registration'">Register</button>
+
+    </div>
+</div>
+<!-- Event 16 -->
+<div class="event-card">
+    <img src="images\marketing16.jpg" alt="Brand Building and Strategy Workshop">
+    <div class="event-details">
+        <h2 class="event-name">Brand Building and Strategy Workshop</h2>
+        <p class="event-price">$170</p>
+        <p class="event-info"><strong>Category:</strong> Marketing</p>
+        <p class="event-info"><strong>Date:</strong> March 8, 2026</p>
+        <p class="event-info"><strong>Location:</strong> Berlin, Germany</p>
+        <p class="event-info"><strong>Organizer:</strong> BrandMasters Inc.</p>
+        <p class="event-description">Develop effective brand-building strategies that set your business apart, create customer loyalty, and drive growth.</p>
+        <button class="register-button" onclick="window.location.href='/registration'">Register</button>
+
+    </div>
+</div>
+
+<!-- Event 17 -->
+<div class="event-card">
+    <img src="images\marketing17.jpg" alt="Marketing Analytics Bootcamp">
+    <div class="event-details">
+        <h2 class="event-name">Marketing Analytics Bootcamp</h2>
+        <p class="event-price">$250</p>
+        <p class="event-info"><strong>Category:</strong> Marketing</p>
+        <p class="event-info"><strong>Date:</strong> April 22, 2026</p>
+        <p class="event-info"><strong>Location:</strong> Chicago, USA</p>
+        <p class="event-info"><strong>Organizer:</strong> DataMarketers</p>
+        <p class="event-description">Learn how to collect, analyze, and leverage marketing data to optimize campaigns and improve business decision-making.</p>
+        <button class="register-button" onclick="window.location.href='/registration'">Register</button>
+
+    </div>
+</div>
+
+<!-- Event 18 -->
+<div class="event-card">
+    <img src="images\marketing18.jpg" alt="PPC and Google Ads Masterclass">
+    <div class="event-details">
+        <h2 class="event-name">PPC and Google Ads Masterclass</h2>
+        <p class="event-price">$220</p>
+        <p class="event-info"><strong>Category:</strong> Marketing</p>
+        <p class="event-info"><strong>Date:</strong> May 10, 2026</p>
+        <p class="event-info"><strong>Location:</strong> Melbourne, Australia</p>
+        <p class="event-info"><strong>Organizer:</strong> AdPros Global</p>
+        <p class="event-description">Master the art of pay-per-click (PPC) advertising with expert guidance on setting up, managing, and optimizing Google Ads campaigns.</p>
+        <button class="register-button" onclick="window.location.href='/registration'">Register</button>
+
+    </div>
+</div>
+
+<!-- Event 19 -->
+<div class="event-card">
+    <img src="images\marketing19.jpg" alt="Content Marketing and Storytelling Workshop">
+    <div class="event-details">
+        <h2 class="event-name">Content Marketing and Storytelling Workshop</h2>
+        <p class="event-price">$210</p>
+        <p class="event-info"><strong>Category:</strong> Marketing</p>
+        <p class="event-info"><strong>Date:</strong> June 5, 2026</p>
+        <p class="event-info"><strong>Location:</strong> Dublin, Ireland</p>
+        <p class="event-info"><strong>Organizer:</strong> StoryBrand Experts</p>
+        <p class="event-description">Learn how to engage your audience through storytelling and develop content that resonates with your brand's core message.</p>
+        <button class="register-button" onclick="window.location.href='/registration'">Register</button>
+
+    </div>
+</div>
+
+<!-- Event 20 -->
+<div class="event-card">
+    <img src="images\marketing20.jpg" alt="B2B Marketing Strategies Summit">
+    <div class="event-details">
+        <h2 class="event-name">B2B Marketing Strategies Summit</h2>
+        <p class="event-price">$300</p>
+        <p class="event-info"><strong>Category:</strong> Marketing</p>
+        <p class="event-info"><strong>Date:</strong> July 20, 2026</p>
+        <p class="event-info"><strong>Location:</strong> Amsterdam, Netherlands</p>
+        <p class="event-info"><strong>Organizer:</strong> B2B Marketers Association</p>
+        <p class="event-description">Discover the latest strategies and tools for successful B2B marketing, from lead generation to account-based marketing (ABM).</p>
+        <button class="register-button" onclick="window.location.href='/registration'">Register</button>
+
+    </div>
+</div>
+<!-- Event 21 -->
+<div class="event-card">
+    <img src="images\marketing21.jpg" alt="SEO Best Practices Seminar">
+    <div class="event-details">
+        <h2 class="event-name">SEO Best Practices Seminar</h2>
+        <p class="event-price">$180</p>
+        <p class="event-info"><strong>Category:</strong> Marketing</p>
+        <p class="event-info"><strong>Date:</strong> August 12, 2026</p>
+        <p class="event-info"><strong>Location:</strong> Seattle, USA</p>
+        <p class="event-info"><strong>Organizer:</strong> SEO Experts Hub</p>
+        <p class="event-description">Master the latest SEO techniques to improve website visibility, optimize content, and rank higher in search engine results.</p>
+        <button class="register-button" onclick="window.location.href='/registration'">Register</button>
+
+    </div>
+</div>
+
+<!-- Event 22 -->
+<div class="event-card">
+    <img src="images\marketing22.jpg" alt="Growth Hacking Workshop">
+    <div class="event-details">
+        <h2 class="event-name">Growth Hacking Workshop</h2>
+        <p class="event-price">$220</p>
+        <p class="event-info"><strong>Category:</strong> Marketing</p>
+        <p class="event-info"><strong>Date:</strong> September 15, 2026</p>
+        <p class="event-info"><strong>Location:</strong> San Francisco, USA</p>
+        <p class="event-info"><strong>Organizer:</strong> GrowthHackers Academy</p>
+        <p class="event-description">Learn the strategies used by fast-growing companies to acquire and retain customers, scale businesses, and drive explosive growth.</p>
+        <button class="register-button" onclick="window.location.href='/registration'">Register</button>
+
+    </div>
+</div>
+
+<!-- Event 23 -->
+<div class="event-card">
+    <img src="images\marketing23.jpg" alt="Video Marketing and YouTube Optimization Seminar">
+    <div class="event-details">
+        <h2 class="event-name">Video Marketing and YouTube Optimization Seminar</h2>
+        <p class="event-price">$210</p>
+        <p class="event-info"><strong>Category:</strong> Marketing</p>
+        <p class="event-info"><strong>Date:</strong> October 18, 2026</p>
+        <p class="event-info"><strong>Location:</strong> Miami, USA</p>
+        <p class="event-info"><strong>Organizer:</strong> VideoPro Marketing</p>
+        <p class="event-description">Learn how to create compelling video content and optimize YouTube channels to reach wider audiences and boost engagement.</p>
+        <button class="register-button" onclick="window.location.href='/registration'">Register</button>
+
+    </div>
+</div>
+
+<!-- Event 24 -->
+<div class="event-card">
+    <img src="images\marketing24.jpg" alt="Affiliate Marketing Workshop">
+    <div class="event-details">
+        <h2 class="event-name">Affiliate Marketing Workshop</h2>
+        <p class="event-price">$230</p>
+        <p class="event-info"><strong>Category:</strong> Marketing</p>
+        <p class="event-info"><strong>Date:</strong> November 22, 2026</p>
+        <p class="event-info"><strong>Location:</strong> Madrid, Spain</p>
+        <p class="event-info"><strong>Organizer:</strong> AffiliateMarketer Pro</p>
+        <p class="event-description">Learn the ins and outs of affiliate marketing, from building partnerships to driving traffic and boosting conversions through affiliate networks.</p>
+        <button class="register-button" onclick="window.location.href='/registration'">Register</button>
+
+    </div>
+</div>
+
+<!-- Event 25 -->
+<div class="event-card">
+    <img src="images\marketing25.jpg" alt="Mobile Marketing Trends and Techniques Conference">
+    <div class="event-details">
+        <h2 class="event-name">Mobile Marketing Trends and Techniques Conference</h2>
+        <p class="event-price">$270</p>
+        <p class="event-info"><strong>Category:</strong> Marketing</p>
+        <p class="event-info"><strong>Date:</strong> December 5, 2026</p>
+        <p class="event-info"><strong>Location:</strong> New Delhi, India</p>
+        <p class="event-info"><strong>Organizer:</strong> MobileMarketers Group</p>
+        <p class="event-description">Explore the latest mobile marketing trends, techniques, and tools, including mobile SEO, app marketing, and SMS marketing strategies.</p>
+        <button class="register-button" onclick="window.location.href='/registration'">Register</button>
+
+    </div>
+</div>
+</form>
+
+
+
+<!-- Script to Toggle Forms -->
+<script>
+    function toggleForm(id) {
+        var form = document.getElementById(id);
+        if (form.style.display === "block") {
+            form.style.display = "none";
+        } else {
+            form.style.display = "block";
+        }
+    }
+
+    function submitForm(eventName, price) {
+        alert('You have successfully registered for ' + eventName + ' at $' + price);
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Management System - Home</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Header Styling */
+        header {
+            background: #200801;
+            padding: 20px;
+            color: #dcd1d1;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .title {
+            font-size: 24px;
+        }
+
+        .auth-btn {
+            background: #fff;
+            color: #1f0015;
+            padding: 8px 15px;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-left: 20px;
+            text-decoration: none;
+        }
+
+        .auth-btn:hover {
+            background: #e3a9d7;
+            color: #fff;
+        }
+
+        .nav-links {
+            margin-top: 10px;
+        }
+
+        .nav-links ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover,
+        nav ul li a.active {
+            color: #f2eef3;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropbtn {
+            background: none;
+            border: none;
+            color: #ffffff;
+            font-size: 18px;
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            margin-top: 10px;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            transition: background 0.3s;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .home-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 100px 50px;
+            background: url('https://wallpapercave.com/wp/wp7488275.jpg') no-repeat center center;
+            background-size: cover;
+            min-height: 100vh;
+            color: white;
+            text-align: center;
+        }
+
+        .home-content h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* Meet the Team Section */
+        .team {
+            padding: 50px 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+
+        .team h3 {
+            font-size: 28px;
+            margin-bottom: 30px;
+        }
+
+        .team .members {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+        }
+
+        .team .member {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .team .member h4 {
+            margin-bottom: 10px;
+            font-size: 22px;
+        }
+
+        .team .member p {
+            font-size: 16px;
+            color: #666;
+        }
+
+        .team .member img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+
+        /* Upcoming Events Section */
+        .upcoming-events {
+            padding: 50px 20px;
+            background-color: #eaeaea;
+            text-align: center;
+        }
+
+        .upcoming-events h3 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .event-list {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            padding: 20px;
+        }
+
+        .event {
+            background: white;
+            border-radius: 10px;
+            padding: 15px;
+            width: 250px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .event h4 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .event p {
+            font-size: 14px;
+            color: #555;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 50px 20px;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+
+        .features h3 {
+            font-size: 28px;
+            margin-bottom: 30px;
+        }
+
+        .features-list {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .feature {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            width: 300px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: left;
+        }
+
+        .feature h4 {
+            margin-bottom: 10px;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            padding: 50px 20px;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        .testimonials h3 {
+            font-size: 28px;
+            margin-bottom: 30px;
+        }
+
+        .testimonial {
+            max-width: 600px;
+            margin: 0 auto 20px;
+            font-style: italic;
+            color: #666;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 50px 20px;
+            background-color: #eaeaea;
+            text-align: center;
+        }
+
+        .contact h3 {
+            font-size: 28px;
+            margin-bottom: 30px;
+        }
+
+        .contact p {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        /* Call to Action Section */
+        .cta {
+            padding: 50px 20px;
+            background-color: #200801;
+            color: white;
+            text-align: center;
+        }
+
+        .cta h3 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .cta a {
+            background: #e3a9d7;
+            color: #1f0015;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .cta a:hover {
+            background: #d19ac0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .home-content {
+                padding: 100px 20px;
+            }
+
+            .home-content h2 {
+                font-size: 24px;
+                padding: 15px;
+            }
+
+            .team .members {
+                flex-direction: column;
+            }
+
+            .event-list {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .features-list {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            footer {
+                background-color: #200801;
+                color: #dcd1d1;
+                padding: 20px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Navigation Bar -->
+    <header>
+        <div class="navbar">
+            <h1 class="title">Event Management System</h1>
+            <a href="#" class="auth-btn" id="auth-btn" onclick="logout(event)">Logout</a>
+        </div>
+        <nav class="nav-links">
+            <ul>
+                <li><a href="/" class="active">Home</a></li>
+                <li class="dropdown">
+                    <button class="dropbtn">Events</button>
+                    <div class="dropdown-content" id="myDropdown">
+                        <a href="/concert">Concert</a>
+                        <a href="/fashion">Fashion</a>
+                        <a href="/marketing">Marketing</a>
+                    </div>
+                </li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact</a></li>
+                <li><a href="/organiser">Organisers</a></li>
+                <li><a href="/sponsor">Sponsors</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content Section -->
+    <main class="home-content">
+        <h2>Events make your life memorable</h2>
+    </main>
+
+    <!-- Meet the Team Section -->
+    <section class="team">
+        <h3>Meet Our Team</h3>
+        <div class="members">
+            <div class="member">
+                <img src="images/sreeja.jpg" alt="Team Member 1">
+                <h4>Sreeja</h4>
+                <p>Event Coordinator</p>
+            </div>
+            <div class="member">
+                <img src="images/manaswini.jpg" alt="Team Member 2">
+                <h4>Manaswini</h4>
+                <p>Marketing Specialist</p>
+            </div>
+            <div class="member">
+                <img src="images/ananya.jpg" alt="Team Member 3">
+                <h4>Ananya</h4>
+                <p>Logistics Manager</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Upcoming Events Section -->
+    <section class="upcoming-events">
+        <h3>Upcoming Events</h3>
+        <div class="event-list">
+            <div class="event">
+                <h4>Concert Night</h4>
+                <p>Date: December 5, 2024</p>
+                <p>Location: City Hall</p>
+            </div>
+            <div class="event">
+                <h4>Fashion Show</h4>
+                <p>Date: January 10, 2025</p>
+                <p>Location: Expo Center</p>
+            </div>
+            <div class="event">
+                <h4>Marketing Seminar</h4>
+                <p>Date: February 20, 2025</p>
+                <p>Location: Conference Room B</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <h3>Features of Our System</h3>
+        <div class="features-list">
+            <div class="feature">
+                <h4>User-Friendly Interface</h4>
+                <p>Our platform is designed for easy navigation and accessibility.</p>
+            </div>
+            <div class="feature">
+                <h4>Real-Time Updates</h4>
+                <p>Stay informed with real-time notifications and updates on events.</p>
+            </div>
+            <div class="feature">
+                <h4>Secure Payments</h4>
+                <p>Experience hassle-free and secure payment options for event registrations.</p>
+            </div>
+            <div class="feature">
+                <h4>Customizable Events</h4>
+                <p>Organizers can easily create and manage their events according to their needs.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <h3>What Our Clients Say</h3>
+        <p class="testimonial">"The event was incredibly well organized! I had a fantastic time!" - Emily R.</p>
+        <p class="testimonial">"An unforgettable experience! Looking forward to more events." - David T.</p>
+        <p class="testimonial">"Great job by the team! Everything was seamless." - Sarah M.</p>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact">
+        <h3>Contact Us</h3>
+        <p>If you have any questions or need assistance, feel free to reach out!</p>
+        <p>Email: info@eventmanagement.com</p>
+        <p>Phone: 9876543210</p>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta">
+        <h3>Ready to Experience Amazing Events?</h3>
+        <a href="/concert">Join Us Today!</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Event Management System. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function logout(event) {
+            // Prevent the default anchor behavior
+            event.preventDefault();
+
+            // Perform logout actions such as clearing session data
+            alert("You have been logged out.");
+            
+            // Redirect to the login page
+            window.location.href = "/login"; // Ensure '/login' route exists
+        }
+
+        document.querySelector('.dropbtn').addEventListener('click', function () {
+            const dropdownContent = document.getElementById('myDropdown');
+            dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
+        });
+
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn')) {
+                const dropdowns = document.getElementsByClassName("dropdown-content");
+                for (let i = 0; i < dropdowns.length; i++) {
+                    const openDropdown = dropdowns[i];
+                    if (openDropdown.style.display === 'block') {
+                        openDropdown.style.display = 'none';
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>

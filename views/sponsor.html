@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sponsors</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Header Styling */
+        header {
+            background: #200801;
+            padding: 20px;
+            color: #dcd1d1;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .title {
+            font-size: 24px;
+        }
+
+        .auth-btn {
+            background: #fff;
+            color: #1f0015;
+            padding: 8px 15px;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-left: 20px;
+            text-decoration: none;
+        }
+
+        .auth-btn:hover {
+            background: #e3a9d7;
+            color: #fff;
+        }
+
+        /* Main Content Styling */
+        .content {
+            padding: 100px 50px; /* To account for the fixed header */
+            background: linear-gradient(135deg, #9db0f1 0%, #d18bb1 100%);
+            min-height: 100vh;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 32px;
+            margin-bottom: 40px;
+            color: #070000;
+        }
+
+        .sponsor-section {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px; /* Space between sponsor items */
+            margin-bottom: 40px;
+        }
+
+        .sponsor {
+            flex: 1 1 200px; /* Allow flexible sizing with a minimum width */
+            max-width: 200px; /* Limit the max width */
+        }
+
+        .sponsor img {
+            width: 100%; /* Ensure the logo takes full width */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 10px; /* Optional: Add border radius */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add shadow */
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .sponsor-section {
+                flex-direction: column; /* Stack vertically on smaller screens */
+                align-items: center; /* Center items */
+            }
+
+            .sponsor {
+                max-width: 80%; /* Adjust max-width for smaller screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="title">Sponsors</h1>
+    </header>
+    <main class="content">
+        <h2>Our Sponsors</h2>
+        <div class="sponsor-section">
+            <div class="sponsor">
+                <img src="https://tse3.mm.bing.net/th?id=OIP.I0Xmcm9bp1LSUmax8uky4wAAAA&pid=Api&P=0&h=180" alt="Sponsor 1">
+            </div>
+            <div class="sponsor">
+                <img src="https://tse2.mm.bing.net/th?id=OIP.RlbMFoGmpwHlXGDHVZIMnwAAAA&pid=Api&P=0&h=180" alt="Sponsor 2">
+            </div>
+            <div class="sponsor">
+                <img src="https://tse2.mm.bing.net/th?id=OIP.2P5W0r52_o_AL_inTfUTbwAAAA&pid=Api&P=0&h=180" alt="Sponsor 3">
+            </div>
+            <div class="sponsor">
+                <img src="https://tse2.mm.bing.net/th?id=OIP.Dnc-EWTs8vE16OTcORX98wHaEK&pid=Api&P=0&h=180" alt="Sponsor 4">
+            </div>
+            <div class="sponsor">
+                <img src="https://tse2.mm.bing.net/th?id=OIP.EO15r1q3H49BWO92b3Z4kQHaEK&pid=Api&P=0&h=180" alt="Sponsor 5">
+            </div>
+        </div>
+        <p>
+            We would like to thank all our sponsors for their generous support. Your contributions help us make this event a success!
+        </p>
+    </main>
+</body>
+</html>

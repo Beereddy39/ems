@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organisers</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Header Styling */
+        header {
+            background: #200801;
+            padding: 20px;
+            color: #dcd1d1;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .title {
+            font-size: 24px;
+        }
+
+        .auth-btn {
+            background: #fff;
+            color: #1f0015;
+            padding: 8px 15px;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-left: 20px;
+            text-decoration: none;
+        }
+
+        .auth-btn:hover {
+            background: #e3a9d7;
+            color: #fff;
+        }
+
+        /* Main Content Styling */
+        .content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 100px 50px; /* To account for the fixed header */
+            background: linear-gradient(135deg, #9db0f1 0%, #d18bb1 100%);
+            min-height: 100vh;
+        }
+
+        .left-section {
+            flex: 1; /* Set flex to 1 to occupy half of the space */
+            max-width: 50%; /* Set max-width to 50% */
+            padding-right: 20px; /* Space between image and text */
+        }
+
+        .right-section {
+            flex: 1; /* Keep the right section equal */
+            max-width: 50%; /* Set max-width to 50% */
+        }
+
+        .left-section img {
+            width: 100%; /* Ensure the image takes full width */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            object-fit: cover; /* Adjusts the image to fit the container */
+        }
+
+        .right-section h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: #070000;
+        }
+
+        .right-section p {
+            font-size: 18px;
+            color: #0b0000;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .left-section, .right-section {
+                max-width: 100%;
+                padding-right: 0; /* Remove padding for smaller screens */
+            }
+
+            .right-section {
+                margin-top: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="content">
+        <div class="left-section">
+            <img src="https://tse2.mm.bing.net/th?id=OIP.YiazlG8L6DxbalLyGMr3NgHaE7&pid=Api&P=0&h=180" alt="Organizers Team">
+        </div>
+        <div class="right-section">
+            
+            <p>
+                We are team Creatives. Having organized over 60+ seminars in 12 different cities in just two years, we understand the latest trends to pick the right topic for our seminars. 
+            </p>
+            <p>
+                We have partnered with several experts who’ve readily agreed to contribute to this good cause of sharing knowledge with passionate professionals.
+            </p>
+            <p>
+                Join this seminar and get a chance to meet us and join our team.
+            </p>
+        </div>
+    </main>
+</body>
+</html>

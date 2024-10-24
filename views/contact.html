@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Page</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Main container styling */
+    .contactUs-main-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 50px;
+      max-width: 1200px;
+      margin: 0 auto;
+      background-color: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+
+    /* Contact information styling */
+    .contactUs-left-para {
+      flex-basis: 50%;
+    }
+
+    .contactUs-left-para h3 {
+      font-size: 2rem;
+      color: #444;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #007bff;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+
+    .mail-links {
+      text-decoration: none;
+      color: #007bff;
+      font-size: 1.1rem;
+      margin-bottom: 15px;
+      display: block;
+    }
+
+    .mail-links:hover {
+      color: #0056b3;
+      text-decoration: underline;
+    }
+
+    .contactUs-left-para i {
+      margin-right: 10px;
+      color: #007bff;
+    }
+
+    .contactUs-left-para a {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+
+    /* Image section styling */
+    .contactUs-pic {
+      flex-basis: 40%;
+      text-align: center;
+    }
+
+    .contactUs-pic img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Responsive design */
+    @media (max-width: 768px) {
+      .contactUs-main-container {
+        flex-direction: column;
+        padding: 30px;
+      }
+
+      .contactUs-left-para {
+        margin-bottom: 20px;
+      }
+
+      .contactUs-pic img {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="contactUs-main-container">
+    <div class="contactUs-left-para">
+      <h3>Let's get in touch</h3>
+      
+      <a class="mail-links" href="mailto:jasminsathupati@gmail.com">
+        <i class="fa fa-envelope"></i> jasminsathupati@gmail.com
+      </a>
+
+      <a class="mail-links" href="https://www.linkedin.com/in/jasmin-sathupati-09a989249">
+        <i class="fa fa-linkedin"></i> LinkedIn: jasminsathupati
+      </a>
+
+      <a class="mail-links" href="https://github.com/jasminsathupati">
+        <i class="fa fa-github"></i> GitHub: jasminsathupati
+      </a>
+
+      <a class="mail-links" href="https://www.instagram.com/jasmin01/">
+        <i class="fa fa-instagram"></i> Instagram: jasminsathupati
+      </a>
+
+      <a class="mail-links" href="tel:+91 9030706352">
+        <i class="fa fa-phone"></i> +91 9030706352
+      </a>
+    </div>
+
+    <div class="contactUs-pic">
+      <img src="images/developer-png.png" alt="Profile Picture">
+    </div>
+  </div>
+
+</body>
+</html>
