@@ -21,5 +21,14 @@
     "gridfs-stream": "^1.1.1",
     "mongoose": "^8.7.2",
     "nodemon": "^3.1.7"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Beereddy39/Eventmanagementsystem.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Beereddy39/Eventmanagementsystem/issues"
+  },
+  "homepage": "https://github.com/Beereddy39/Eventmanagementsystem#readme"
 }
